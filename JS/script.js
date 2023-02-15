@@ -10,7 +10,7 @@ const checkConnection = async () => {
     try {
         // Try to fetch random data from the API. If the status code is between 
         // 200 and 300, the network connection is considered online 
-        const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const response = await fetch("https://api.publicapis.org/entries");
         isOnline = response.status >= 200 && response.status < 300;
     } catch (error) {
         isOnline = false; // If there is an error, the connection is considered offline
