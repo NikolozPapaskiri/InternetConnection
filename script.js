@@ -1,3 +1,5 @@
+//in order to test just open Netwwork tab in Inpect 
+//Element and swotch from No throttling to offline
 const popup = document.querySelector(".popup"),
 wifiIcon = document.querySelector(".icon i"),
 popupTitle = document.querySelector(".popup .title"),
@@ -10,7 +12,7 @@ const checkConnection = async () => {
     try {
         // Try to fetch random data from the API. If the status code is between 
         // 200 and 300, the network connection is considered online 
-        const response = await fetch("https://api.publicapis.org/entries");
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts");
         isOnline = response.status >= 200 && response.status < 300;
     } catch (error) {
         isOnline = false; // If there is an error, the connection is considered offline
